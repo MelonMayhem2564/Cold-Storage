@@ -21,6 +21,7 @@ public class Playerscript : MonoBehaviour
     {
         Movement();
         Rotation();
+        Jump();
     }
     void Movement()
     {
@@ -33,6 +34,7 @@ public class Playerscript : MonoBehaviour
             transform.Translate(speed, 0, 0);
         }
         Rotation();
+        Jump();
     }
     void Rotation()
     {
@@ -43,6 +45,13 @@ public class Playerscript : MonoBehaviour
         if ((Input.GetKey("right") == true) || (Input.GetKey("d") == true))
         {
             transform.Rotate(0, 0.5f, 0, Space.Self);
+        }
+    }
+    void Jump()
+    {
+        if (Input.GetKeyDown("space") == true)
+        {
+            rb.AddForce(0, 5, 0);
         }
     }
 }
