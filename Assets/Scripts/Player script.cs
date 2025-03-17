@@ -34,7 +34,6 @@ public class Playerscript : MonoBehaviour
             transform.Translate(speed, 0, 0);
         }
         Rotation();
-        Jump();
     }
     void Rotation()
     {
