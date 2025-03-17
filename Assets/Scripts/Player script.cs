@@ -1,23 +1,20 @@
 using UnityEditor;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Playerscript : MonoBehaviour
 {
     Rigidbody rb;
-    Animator anim;
     SpriteRenderer sr;
-    float speed = 0.02f;
-    bool isGrounded;
+    float speed = 5f;
     Vector3 movement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         Movement();
@@ -27,23 +24,22 @@ public class Playerscript : MonoBehaviour
     {
         if ((Input.GetKey("up") == true || Input.GetKey("w") == true))
         {
-            transform.Translate(-speed, 0, 0);
+            rb.linearVelocity = transform.forward * speed;
         }
         if ((Input.GetKey("down") == true) || (Input.GetKey("s") == true))
         {
-            transform.Translate(speed, 0, 0);
+            rb.linearVelocity = -transform.forward * speed;
         }
-        Rotation();
     }
     void Rotation()
     {
         if ((Input.GetKey("left") == true) || (Input.GetKey("a") == true))
         {
-            transform.Rotate(0, -0.5f, 0, Space.Self);
+            transform.Rotate(0, -1f, 0, Space.Self);
         }
         if ((Input.GetKey("right") == true) || (Input.GetKey("d") == true))
         {
-            transform.Rotate(0, 0.5f, 0, Space.Self);
+            transform.Rotate(0, 1f, 0, Space.Self);
         }
     }
 }
