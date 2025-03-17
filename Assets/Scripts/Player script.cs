@@ -6,7 +6,8 @@ public class Playerscript : MonoBehaviour
     Rigidbody rb;
     Animator anim;
     SpriteRenderer sr;
-    float speed = 0.015f;
+    float speed = 0.02f;
+    bool isGrounded;
     Vector3 movement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +22,6 @@ public class Playerscript : MonoBehaviour
     {
         Movement();
         Rotation();
-        Jump();
     }
     void Movement()
     {
@@ -44,13 +44,6 @@ public class Playerscript : MonoBehaviour
         if ((Input.GetKey("right") == true) || (Input.GetKey("d") == true))
         {
             transform.Rotate(0, 0.5f, 0, Space.Self);
-        }
-    }
-    void Jump()
-    {
-        if (Input.GetKeyDown("space") == true)
-        {
-            rb.AddForce(0, 5, 0);
         }
     }
 }
