@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Playerscript : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Playerscript : MonoBehaviour
     {
         Movement();
         Rotation();
+        QuitGame();
     }
     void Movement()
     {
@@ -40,6 +42,13 @@ public class Playerscript : MonoBehaviour
         if ((Input.GetKey("right") == true) || (Input.GetKey("d") == true))
         {
             transform.Rotate(0, 1f, 0, Space.Self);
+        }
+    }
+    void QuitGame()
+    {
+        if (Input.GetKey("q") == true)
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 }

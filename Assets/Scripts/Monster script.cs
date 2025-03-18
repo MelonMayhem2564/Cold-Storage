@@ -19,16 +19,16 @@ public class RandomMovement : MonoBehaviour
 
     private void Update()
     {
+        anim.SetBool("Walk", true);
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            anim.SetBool("Walk", false);
+            anim.SetBool("Walk", true);
             new WaitForSeconds(4);
             Vector3 point;
             if (RandomPoint(centrePoint.position, range, out point))
             {
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
                 agent.SetDestination(point);
-                anim.SetBool("Walk", true);
             }
 
         }
@@ -42,6 +42,7 @@ public class RandomMovement : MonoBehaviour
         if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
         {
             result = hit.position;
+            anim.SetBool("Walk", true);
             return true;
         }
 
