@@ -9,25 +9,31 @@ public class RandomMovement : MonoBehaviour
 
     public Transform centrePoint;
 
+    Animator anim;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
     }
 
-
-    void Update()
+    private void Update()
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
+            anim.SetBool("Walk", false);
+            new WaitForSeconds(4);
             Vector3 point;
             if (RandomPoint(centrePoint.position, range, out point))
             {
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
                 agent.SetDestination(point);
+                anim.SetBool("Walk", true);
             }
-        }
 
+        }
     }
+
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
 
