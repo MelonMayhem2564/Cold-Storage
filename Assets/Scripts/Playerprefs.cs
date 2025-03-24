@@ -11,6 +11,7 @@ public class Playerprefs : MonoBehaviour
     public Slider Musicvolume;
     public Slider Soundeffectsvolume;
     public Toggle Musictoggle;
+    public Toggle Soundeffectstoggle;
 
     public void Start()
     {
@@ -52,6 +53,25 @@ public class Playerprefs : MonoBehaviour
             Musictoggle.isOn = true; // set button tick box to ON
             PlayerPrefs.SetInt("musicToggle", 1);
         }
+
+        if (PlayerPrefs.HasKey("soundEffectsToggle") == true)
+        {
+            int toggle = PlayerPrefs.GetInt("soundEffectsToggle");
+
+            if (toggle == 0)
+            {
+                Soundeffectstoggle.isOn = false;
+            }
+            else
+            {
+                Soundeffectstoggle.isOn = true;
+            }
+        }
+        else
+        {
+            Soundeffectstoggle.isOn = true; // set button tick box to ON
+            PlayerPrefs.SetInt("soundeffectsToggle", 1);
+        }
     }
 
     public void MusicVolume(float volume)
@@ -68,6 +88,11 @@ public class Playerprefs : MonoBehaviour
         PlayerPrefs.SetInt("musicToggle", music ? 1 : 0);
         print("music set to " + music);
     }
+    public void SoundEffectsToggle(bool soundeffects)
+    {
+        PlayerPrefs.SetInt("soundeffectsToggle", soundeffects ? 1 : 0);
+        print("sound effects set to " + soundeffects);
+    }
 
     public void MusicVolumeChanged(float vol)
     {
@@ -82,6 +107,9 @@ public class Playerprefs : MonoBehaviour
     public void MusicToggleChanged(int mus)
     {
         print("The music is now " + mus);
-        //MusicToggle(mus);
+    }
+    public void SoundEffectsToggleChanged(int se)
+    {
+        print("The music is now " + se);
     }
 }
