@@ -35,10 +35,12 @@ public class VolumeSettings : MonoBehaviour
         if (toggle == true)
         {
             Musicvolume.value = 1f;
+            AudioManager.instance.PlayClip(1);
         }
         else if (toggle == false)
         {
             Musicvolume.value = 0.0001f;
+            AudioManager.instance.PlayClip(2);
         }
     }
     public void EnableMusicToggle()
