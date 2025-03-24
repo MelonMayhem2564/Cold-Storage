@@ -3728,10 +3728,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1465086261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -200, y: 79.2}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2052522490
 MonoBehaviour:
@@ -3755,7 +3755,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'To: REDACTED, DL Storage
 
-    From: REDACTED, DL Storage
+    From: Benjamin REDACTED, CEO, DL Storage
 
     Subject:
     Facility 72
@@ -3773,7 +3773,7 @@ MonoBehaviour:
     Last contact: 2 months
 
     GREENLIT
-    FOR INVESTIGATION WITH X-36 INVESTIGATION DRONE
+    FOR INVESTIGATION WITH XC-36 INVESTIGATION DRONE
 
 
     Objective: Investigate
@@ -3781,6 +3781,11 @@ MonoBehaviour:
 
     WARNING: last transmission suggested
     hostiles within, procede with caution
+
+    Company notice: Under no circumstances
+    is this information to be shared with anyone, failure to comply with this will
+    result in job termination or REDACTED
+
 
 '
   m_isRightToLeft: 0
@@ -3809,8 +3814,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3847,7 +3852,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -145.91325}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
