@@ -10,9 +10,14 @@ public class Buttonscript : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("Game");
+        AudioManager.instance.PlayClip(1);
     }
     public void QuitGameFromMenu()
     {
         Application.Quit();
+    }
+    public void Selection()
+    {
+        AudioManager.instance.PlayClip(0);
     }
 }
