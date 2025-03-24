@@ -11,4 +11,8 @@ public class Buttonscript : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+    public void QuitGameFromMenu()
+    {
+        Application.Quit();
+    }
 }
