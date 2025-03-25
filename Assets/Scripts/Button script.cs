@@ -11,6 +11,7 @@ public class Buttonscript : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
         AudioManager.instance.PlayClip(0);
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void QuitGameFromMenu()
     {

@@ -11,20 +11,21 @@ public class RandomMovement : MonoBehaviour
 
     Animator anim;
 
+    bool reachedPoint;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+
+
+        StartCoroutine(PatrolDelay());
+        anim.SetBool("Walk", true);
+
     }
 
     private void Update()
     {
-        anim.SetBool("Walk", true);
-        //if it's at the point
-        if (agent.remainingDistance <= agent.stoppingDistance)
-        {
-            StartCoroutine(PatrolDelay());
-        }
     }
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
@@ -44,14 +45,54 @@ public class RandomMovement : MonoBehaviour
 
     IEnumerator PatrolDelay()
     {
-        anim.SetBool("Walk", false);
-        yield return new WaitForSeconds(Random.Range(5f, 15f));
-        
-        Vector3 point;
-        if (RandomPoint(centrePoint.position, range, out point))
+        while (true)
         {
-            Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-            agent.SetDestination(point);
+            anim.SetBool("Walk", true);
+
+            //if it's at the point
+            if (agent.remainingDistance > agent.stoppingDistance )
+            {
+                //yield return null;
+            }
+
+            //nav agent has reached destination point
+
+            anim.SetBool("Walk", true);
+            yield return new WaitForSeconds(Random.Range(1f, 3f));
+
+            Vector3 point;
+
+            for (int i = 0; i < 10000; i++)
+            {
+                if (RandomPoint(centrePoint.position, range, out point))
+                {
+                    Debug.DrawRay(point, Vector3.up, Color.blue, 3.0f);
+                    agent.SetDestination(point);
+                    print("moving to random point " + point + "  after " + i + "  attempts");
+
+                    // found a valid point
+                    while (true )
+                    {
+                        print("remaining=" + agent.remainingDistance);
+                        if( agent.remainingDistance <= agent.stoppingDistance )
+                        {
+                            //reached point
+                            break;
+                        }
+                        else
+                        {
+                            yield return null;
+                        }
+
+                    }
+
+
+                   break;
+                }
+            }
+            yield return null;
+
         }
+
     }
 }

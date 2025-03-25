@@ -49,6 +49,7 @@ public class Playerscript : MonoBehaviour
         if (Input.GetKey("q") == true)
         {
             SceneManager.LoadScene("Menu");
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
