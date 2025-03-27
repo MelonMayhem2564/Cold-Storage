@@ -39,16 +39,16 @@ public class VolumeSettings : MonoBehaviour
         }
         else if (toggle == false)
         {
-            Musicvolume.value = 0.0002f;
+            Musicvolume.value = 0.0001f;
         }
     }
     public void EnableMusicToggle()
     {
-        if (Musicvolume.value > 0.0002f)
+        if (Musicvolume.value > 0.0001f)
         {
             MusicToggle.isOn = true;
         }
-        else if (Musicvolume.value <= 0.0002f)
+        else if (Musicvolume.value < 0.0002f)
         {
             MusicToggle.isOn = false;
         }
@@ -63,16 +63,16 @@ public class VolumeSettings : MonoBehaviour
         }
         else if (toggle == false)
         {
-            Soundeffectsvolume.value = 0.0002f;
+            Soundeffectsvolume.value = 0.0001f;
         }
     }
     public void EnableSoundEffectsToggle()
     {
-        if (Soundeffectsvolume.value > 0.0002f)
+        if (Soundeffectsvolume.value > 0.0001f)
         {
             Soundeffectstoggle.isOn = true;
         }
-        else if (Soundeffectsvolume.value <= 0.0002f)
+        else if (Soundeffectsvolume.value < 0.0002f)
         {
             Soundeffectstoggle.isOn = false;
         }

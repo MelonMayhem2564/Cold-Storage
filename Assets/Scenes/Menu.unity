@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.3882353, b: 0.21960784, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &131111573
 GameObject:
@@ -745,7 +745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: -65}
+  m_AnchoredPosition: {x: 215, y: -65}
   m_SizeDelta: {x: 210, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139539758
@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &355636890
 GameObject:
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &403297250
 GameObject:
@@ -2040,7 +2040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &407235639
 GameObject:
@@ -2373,7 +2373,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 1515, y: -277}
-  m_SizeDelta: {x: 250, y: 60}
+  m_SizeDelta: {x: 270, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744039102
 MonoBehaviour:
@@ -2389,7 +2389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!114 &744039103
 MonoBehaviour:
@@ -2669,7 +2669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &840989637
 GameObject:
@@ -2921,8 +2921,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.5, y: 0}
-  m_SizeDelta: {x: -25, y: 0}
+  m_AnchoredPosition: {x: 17.449999, y: 0}
+  m_SizeDelta: {x: -25.100004, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026133457
 MonoBehaviour:
@@ -2980,7 +2980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &1084908705
 GameObject:
@@ -3133,7 +3133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &1121902950
 GameObject:
@@ -3371,7 +3371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.005
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &1160772776
 GameObject:
@@ -3483,7 +3483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: 65}
+  m_AnchoredPosition: {x: 215, y: 65}
   m_SizeDelta: {x: 210, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219873437
@@ -3851,7 +3851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &1330307439
 GameObject:
@@ -4447,7 +4447,6 @@ RectTransform:
   - {fileID: 407235640}
   - {fileID: 1160772777}
   - {fileID: 238517763}
-  - {fileID: 1494113017}
   - {fileID: 1219873436}
   - {fileID: 1657947375}
   - {fileID: 139539757}
@@ -4459,78 +4458,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1494113016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1494113017}
-  - component: {fileID: 1494113019}
-  - component: {fileID: 1494113018}
-  m_Layer: 5
-  m_Name: Background border (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1494113017
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494113016}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.4, z: 0.1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1465086261}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.399994, y: -23}
-  m_SizeDelta: {x: 800, y: 371}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1494113018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494113016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.50980395, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 373b2985ce5bf2d4e9087e510d761960, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1494113019
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494113016}
-  m_CullTransparentMesh: 1
 --- !u!1 &1495580278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4567,8 +4494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1460, y: -275}
-  m_SizeDelta: {x: 250, y: 60}
+  m_AnchoredPosition: {x: 1506, y: -275}
+  m_SizeDelta: {x: 270, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1495580280
 MonoBehaviour:
@@ -4695,7 +4622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &1519462496
 GameObject:
@@ -4734,7 +4661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: -130}
+  m_AnchoredPosition: {x: 215, y: -130}
   m_SizeDelta: {x: 210, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519462498
@@ -4994,7 +4921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &1547673416
 GameObject:
@@ -5450,7 +5377,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 942809027}
+  m_TargetGraphic: {fileID: 1999792173}
   toggleTransition: 1
   graphic: {fileID: 1121902952}
   m_Group: {fileID: 0}
@@ -5791,7 +5718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: 0}
+  m_AnchoredPosition: {x: 215, y: 0}
   m_SizeDelta: {x: 210, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657947376
@@ -5982,7 +5909,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 70121616}
+  m_TargetGraphic: {fileID: 1458223208}
   toggleTransition: 1
   graphic: {fileID: 1456661013}
   m_Group: {fileID: 0}
@@ -7004,7 +6931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.1
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &2038069282
 GameObject:
@@ -7421,7 +7348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeStart: 0
   timeBtwChars: 0.0025
-  leadingChar: 
+  leadingChar: <
   leadingCharBeforeDelay: 0
 --- !u!1 &2138921411
 GameObject:

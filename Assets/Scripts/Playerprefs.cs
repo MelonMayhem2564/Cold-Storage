@@ -26,15 +26,6 @@ public class Playerprefs : MonoBehaviour
             Musicvolume.value = 0.5f;
         }
 
-        if (PlayerPrefs.HasKey("soundEffectsVol") == true)
-        {
-            Soundeffectsvolume.value = PlayerPrefs.GetFloat("soundEffectsVol");
-        }
-        else
-        {
-            Soundeffectsvolume.value = 0.5f;
-        }
-
         if (PlayerPrefs.HasKey("musicToggle") == true)
         {
             int toggle = PlayerPrefs.GetInt("musicToggle");
@@ -52,6 +43,17 @@ public class Playerprefs : MonoBehaviour
         {
             Musictoggle.isOn = true; // set button tick box to ON
             PlayerPrefs.SetInt("musicToggle", 1);
+        }
+
+
+        if (PlayerPrefs.HasKey("soundEffectsVol") == true)
+        {
+            Soundeffectsvolume.value = PlayerPrefs.GetFloat("soundEffectsVol");
+            print("Getting soundeffectsvol from playerprefs " + Soundeffectsvolume.value);
+        }
+        else
+        {
+            Soundeffectsvolume.value = 0.5f;
         }
 
         if (PlayerPrefs.HasKey("soundEffectsToggle") == true)
