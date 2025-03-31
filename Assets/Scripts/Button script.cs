@@ -5,6 +5,8 @@ using UnityEditor;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
+
 public class Buttonscript : MonoBehaviour
 {
     public void LoadGame()
@@ -25,5 +27,9 @@ public class Buttonscript : MonoBehaviour
     public void Unselection()
     {
         AudioManager.instance.PlayClip(2);
+    }
+    public void Secret()
+    {
+        AudioManager.instance.PlayClip(0);
     }
 }

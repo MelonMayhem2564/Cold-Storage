@@ -53,29 +53,5 @@ public class VolumeSettings : MonoBehaviour
             MusicToggle.isOn = false;
         }
     }
-
-    public void SetSoundEffectsToggle()
-    {
-        bool toggle = Soundeffectstoggle.isOn;
-        if (toggle == true)
-        {
-            Soundeffectsvolume.value = 1f;
-        }
-        else if (toggle == false)
-        {
-            Soundeffectsvolume.value = 0.0001f;
-        }
-    }
-    public void EnableSoundEffectsToggle()
-    {
-        if (Soundeffectsvolume.value > 0.0001f)
-        {
-            Soundeffectstoggle.isOn = true;
-        }
-        else if (Soundeffectsvolume.value < 0.0002f)
-        {
-            Soundeffectstoggle.isOn = false;
-        }
-    }
 }
 
