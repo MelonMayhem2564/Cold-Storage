@@ -11,8 +11,6 @@ public class Playerscript : MonoBehaviour
     SpriteRenderer sr;
     float speed = 5f;
     Vector3 movement;
-    Canvas MainMenu;
-    Canvas SECRET;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,22 +25,22 @@ public class Playerscript : MonoBehaviour
     }
     void Movement()
     {
-        if ((Input.GetKey("up") == true || Input.GetKey("w") == true))
+        if (Input.GetKey("up") == true)
         {
             rb.linearVelocity = transform.forward * speed;
         }
-        if ((Input.GetKey("down") == true) || (Input.GetKey("s") == true))
+        if (Input.GetKey("down") == true)
         {
             rb.linearVelocity = -transform.forward * speed;
         }
     }
     void Rotation()
     {
-        if ((Input.GetKey("left") == true) || (Input.GetKey("a") == true))
+        if (Input.GetKey("left") == true)
         {
             transform.Rotate(0, -1f, 0, Space.Self);
         }
-        if ((Input.GetKey("right") == true) || (Input.GetKey("d") == true))
+        if (Input.GetKey("right") == true)
         {
             transform.Rotate(0, 1f, 0, Space.Self);
         }
@@ -53,15 +51,6 @@ public class Playerscript : MonoBehaviour
         {
             SceneManager.LoadScene("Menu");
             Cursor.lockState = CursorLockMode.None;
-        }
-    }
-    public void Secret()
-    {
-        if (Input.GetKey("l") == true)
-        {
-            AudioManager.instance.PlayClip(1);
-            MainMenu.enabled = false;
-            SECRET.enabled = true;
         }
     }
 }
