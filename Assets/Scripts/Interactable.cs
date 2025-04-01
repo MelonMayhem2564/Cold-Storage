@@ -1,0 +1,30 @@
+using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
+using System.Collections.Generic;
+
+public class Interactable : MonoBehaviour
+{
+    Outline outline;
+    public string message;
+    public UnityEvent onInteraction;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        outline = GetComponent<Outline>();
+        outline.enabled = false;
+    }
+    public void Interact()
+    {
+        onInteraction.Invoke();
+    }
+    public void EnableOutline()
+    {
+        outline.enabled = true;
+    }
+    public void DisableOutline()
+    {
+        outline.enabled = false;
+    }
+}
