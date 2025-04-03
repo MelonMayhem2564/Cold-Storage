@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class PlayerCameraDetection : MonoBehaviour
@@ -31,6 +33,7 @@ public class PlayerCameraDetection : MonoBehaviour
             CheckInteraction();
             if (Input.GetKeyDown(KeyCode.X) && currentInteractable != null)
             {
+                AudioManager.instance.PlayClip(3);
                 currentInteractable.Interact();
             }
         }

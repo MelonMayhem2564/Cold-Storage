@@ -22,6 +22,6 @@ public class HUDController : MonoBehaviour
 
     public void DisableInteractionText()
     {
-        interactionText.gameObject.SetActive(false);
+        interactionText.text = "Searching...";
     }
 }
