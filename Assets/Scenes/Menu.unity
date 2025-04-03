@@ -2549,15 +2549,15 @@ RectTransform:
   m_GameObject: {fileID: 681497255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.4, z: 0.1}
+  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.099999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2129114781}
   m_Father: {fileID: 1763842401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 393.4, y: -116.25058}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 140, y: -10}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681497257
@@ -4920,7 +4920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1465086258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7064,7 +7064,6 @@ RectTransform:
   m_Children:
   - {fileID: 1999792172}
   - {fileID: 1638764553}
-  - {fileID: 88081613}
   - {fileID: 989850288}
   - {fileID: 1514710838}
   - {fileID: 1958084867}
@@ -7072,13 +7071,14 @@ RectTransform:
   - {fileID: 89245535}
   - {fileID: 1420170738}
   - {fileID: 1807610287}
+  - {fileID: 88081613}
+  - {fileID: 681497256}
   - {fileID: 1436511942}
   - {fileID: 791646412}
   - {fileID: 2138921412}
   - {fileID: 1655425317}
   - {fileID: 373724058}
   - {fileID: 1661862793}
-  - {fileID: 681497256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7778,7 +7778,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c12d40421acc84a4b90823d6080bbad1, type: 3}
   - {fileID: 8300000, guid: 18b3e77931f64a04f8ba522b5de9a4d4, type: 3}
   - {fileID: 8300000, guid: df3cf1477eb18c44ebd8b1501f90c833, type: 3}
-  - {fileID: 8300000, guid: 07ec89c1348efcc4cb75c09cdf270136, type: 3}
+  - {fileID: 8300000, guid: b67b87dcc888f4342acba6d42863e6bf, type: 3}
 --- !u!1 &2032020129
 GameObject:
   m_ObjectHideFlags: 0
@@ -8294,8 +8294,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294949376
-  m_fontColor: {r: 0, g: 0.7294118, b: 1, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8312,8 +8312,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

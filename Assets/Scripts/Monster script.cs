@@ -58,7 +58,7 @@ public class RandomMovement : MonoBehaviour
             //nav agent has reached destination point
 
             anim.SetBool("Walk", true);
-            yield return new WaitForSeconds(Random.Range(1f, 3f));
+            yield return new WaitForSeconds(Random.Range(5f, 10f));
 
             Vector3 point;
 
