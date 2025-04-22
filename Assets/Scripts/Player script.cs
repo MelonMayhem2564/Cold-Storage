@@ -25,22 +25,22 @@ public class Playerscript : MonoBehaviour
     }
     void Movement()
     {
-        if (Input.GetKey("up") == true)
+        if ((Input.GetKey("up") == true) || (Input.GetKey("w") == true))
         {
             rb.linearVelocity = transform.forward * speed;
         }
-        if (Input.GetKey("down") == true)
+        if ((Input.GetKey("down") == true) || (Input.GetKey("s") == true))
         {
             rb.linearVelocity = -transform.forward * speed;
         }
     }
     void Rotation()
     {
-        if (Input.GetKey("left") == true)
+        if ((Input.GetKey("left") == true) || (Input.GetKey("a") == true))
         {
             transform.Rotate(0, -1f, 0, Space.Self);
         }
-        if (Input.GetKey("right") == true)
+        if ((Input.GetKey("right") == true) || (Input.GetKey("d") == true))
         {
             transform.Rotate(0, 1f, 0, Space.Self);
         }
