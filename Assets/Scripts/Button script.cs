@@ -15,6 +15,11 @@ public class Buttonscript : MonoBehaviour
         AudioManager.instance.PlayClip(0);
         Cursor.lockState = CursorLockMode.Locked;
     }
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        AudioManager.instance.PlayClip(0);
+    }
     public void QuitGameFromMenu()
     {
         Application.Quit();
@@ -31,5 +36,9 @@ public class Buttonscript : MonoBehaviour
     public void Secret()
     {
         AudioManager.instance.PlayClip(0);
+    }
+    public void GameComplete()
+    {
+        AudioManager.instance.PlayClip(1); ;
     }
 }

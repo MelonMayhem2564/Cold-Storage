@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerCameraDetection : MonoBehaviour
@@ -15,14 +16,21 @@ public class PlayerCameraDetection : MonoBehaviour
 
     public float playerReach = 3f;
     Interactable currentInteractable;
+
+    public int workers;
+    public TMP_Text workersFound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         camera = Camera.main;
         MeshRenderer = GetComponent<MeshRenderer>();
         collider = GetComponent<Collider>();
+        workers = 0;
+        if (workersFound != null)
+        {
+            workersFound.text = "Workers found: " + workers + "/10";
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -35,12 +43,18 @@ public class PlayerCameraDetection : MonoBehaviour
             {
                 AudioManager.instance.PlayClip(3);
                 currentInteractable.Interact();
+                UpdateWorkers(1);
             }
         }
         else
         {
 
         }
+        if (workers == 10)
+        {
+            ExtractionLoad();
+        }
+
     }
 
     void CheckInteraction()
@@ -96,5 +110,19 @@ public class PlayerCameraDetection : MonoBehaviour
             currentInteractable.DisableOutline();
             currentInteractable = null;
         }
+    }
+
+    private void UpdateWorkers(int addWorker)
+    {
+        workers += addWorker;
+        if (workersFound != null)
+        {
+            workersFound.text = "Workers found: " + workers + "/10";
+        }
+    }
+
+    public void ExtractionLoad()
+    {
+        SceneManager.LoadScene("Extraction");
     }
 }
