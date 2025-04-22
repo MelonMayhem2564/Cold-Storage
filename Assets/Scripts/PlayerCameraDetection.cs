@@ -46,11 +46,7 @@ public class PlayerCameraDetection : MonoBehaviour
                 UpdateWorkers(1);
             }
         }
-        else
-        {
-
-        }
-        if (workers == 10)
+        else if (workers == 10)
         {
             ExtractionLoad();
         }
@@ -119,10 +115,5 @@ public class PlayerCameraDetection : MonoBehaviour
         {
             workersFound.text = "Workers found: " + workers + "/10";
         }
-    }
-
-    public void ExtractionLoad()
-    {
-        SceneManager.LoadScene("Extraction");
     }
 }

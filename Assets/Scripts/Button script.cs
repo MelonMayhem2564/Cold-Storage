@@ -41,4 +41,8 @@ public class Buttonscript : MonoBehaviour
     {
         AudioManager.instance.PlayClip(1); ;
     }
+    public void ExtractionLoad()
+    {
+        SceneManager.LoadScene("Extraction");
+    }
 }

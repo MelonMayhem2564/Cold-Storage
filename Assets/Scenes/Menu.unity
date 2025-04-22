@@ -8156,10 +8156,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'MISSION BRIEFING
 
-    To: J REDACTED, DL Storage
+    To: J REDACTED, employee, DL Storage
 
-    From: B REDACTED,
-    CEO, DL Storage
+    From:
+    B REDACTED, CEO, DL Storage
 
     Subject: Facility 72
 
