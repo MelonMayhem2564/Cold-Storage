@@ -41,7 +41,7 @@ public class PlayerCameraDetection : MonoBehaviour
             CheckInteraction();
             if (Input.GetKeyDown(KeyCode.X) && currentInteractable != null)
             {
-                AudioManager.instance.PlayClip(3);
+                AudioManager.instance.PlayClip(1);
                 currentInteractable.Interact();
                 UpdateWorkers(1);
             }

@@ -24,10 +24,6 @@ public class RandomMovement : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-    }
-
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
         Vector3 randomPoint = center + Random.insideUnitSphere * range;
