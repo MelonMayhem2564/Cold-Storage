@@ -48,7 +48,7 @@ public class PlayerCameraDetection : MonoBehaviour
         }
         else if (workers == 10)
         {
-            ExtractionLoad();
+            SceneManager.LoadScene("Extraction");
         }
 
     }
