@@ -46,9 +46,10 @@ public class PlayerCameraDetection : MonoBehaviour
                 UpdateWorkers(1);
             }
         }
-        else if (workers == 10)
+        if (workers == 10)
         {
-            SceneManager.LoadScene("Extraction");
+            SceneManager.LoadScene("Game win");
+            Cursor.lockState = CursorLockMode.None;
         }
 
     }

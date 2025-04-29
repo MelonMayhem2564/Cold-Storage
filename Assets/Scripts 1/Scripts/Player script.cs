@@ -22,6 +22,8 @@ public class Playerscript : MonoBehaviour
         Movement();
         Rotation();
         QuitGame();
+        DeathTest();
+        WinTest();
     }
     void Movement()
     {
@@ -50,6 +52,22 @@ public class Playerscript : MonoBehaviour
         if (Input.GetKey("q") == true)
         {
             SceneManager.LoadScene("Menu");
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+    void DeathTest()
+    {
+        if (Input.GetKey("f") == true)
+        {
+            SceneManager.LoadScene("Death");
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+    void WinTest()
+    {
+        if (Input.GetKey("r") == true)
+        {
+            SceneManager.LoadScene("Game win");
             Cursor.lockState = CursorLockMode.None;
         }
     }

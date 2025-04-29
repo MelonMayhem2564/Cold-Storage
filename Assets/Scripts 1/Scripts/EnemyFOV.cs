@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 public class EnemyFOV : MonoBehaviour
 {
@@ -21,6 +22,16 @@ public class EnemyFOV : MonoBehaviour
     public MeshFilter viewMeshFilter;
 
     Mesh viewMesh;
+
+    public NavMeshAgent agent;
+    public Transform player;
+    public LayerMask whatIsGround, whatIsPlayer;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
+    }
 
     void Start()
     {
