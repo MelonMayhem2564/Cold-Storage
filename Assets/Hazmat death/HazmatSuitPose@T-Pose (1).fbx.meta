@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e57b8ca6c39741346b7287f7c4b4e037
+guid: ff4794ecfd5a00d42baabc4985cee568
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -80,42 +80,7 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton:
-    - name: HazmatSuitPose(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Cube
-      parentName: HazmatSuitPose(Clone)
-      position: {x: -0, y: 0.9935624, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 100, y: 100, z: 100}
-    - name: Cube.001
-      parentName: HazmatSuitPose(Clone)
-      position: {x: -0, y: 1.7430047, z: 0.04461541}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 100, y: 100, z: 100}
-    - name: Plane
-      parentName: HazmatSuitPose(Clone)
-      position: {x: -0.09423444, y: 1.0759103, z: 0.14210846}
-      rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-      scale: {x: 100, y: 100, z: 100}
-    - name: Cube.002
-      parentName: HazmatSuitPose(Clone)
-      position: {x: -0, y: 0.9935624, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 100, y: 100, z: 100}
-    - name: Cube.003
-      parentName: HazmatSuitPose(Clone)
-      position: {x: -0, y: 0.9935624, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 100, y: 100, z: 100}
-    - name: Cube.004
-      parentName: HazmatSuitPose(Clone)
-      position: {x: -0.1827899, y: 1.0618374, z: 0.09215336}
-      rotation: {x: -0.65488154, y: -0.2882422, z: -0.3131677, w: 0.624478}
-      scale: {x: 100.00001, y: 100, z: 100}
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

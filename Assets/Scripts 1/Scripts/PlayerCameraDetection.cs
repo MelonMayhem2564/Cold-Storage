@@ -32,7 +32,7 @@ public class PlayerCameraDetection : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         var bounds = collider.bounds;
         cameraFrustum = GeometryUtility.CalculateFrustumPlanes(camera);
