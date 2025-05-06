@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using Unity.VisualScripting;
 
 public class EnemyFOV : MonoBehaviour
 {
@@ -27,10 +28,15 @@ public class EnemyFOV : MonoBehaviour
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public Playerscript Playerscript;
+
+    Animator anim;
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        Playerscript = GetComponent<Playerscript>();
+        anim = GetComponent<Animator>();
     }
 
     void Start()
@@ -38,6 +44,7 @@ public class EnemyFOV : MonoBehaviour
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
+        
 
         StartCoroutine("FindTargetWithDelay", 0.2f);
     }
@@ -59,6 +66,7 @@ public class EnemyFOV : MonoBehaviour
     void FindVisibleTargets()
     {
         visibleTarget.Clear();
+        agent.speed = 2;
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetmask);
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
@@ -68,11 +76,22 @@ public class EnemyFOV : MonoBehaviour
             if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
+                agent.SetDestination(player.position);
+                agent.speed = 4;
             }
             if (!Physics.Raycast(transform.position, dirToTarget, obstructionmask))
             {
                 visibleTarget.Add(target);
+                
             }
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
         }
     }
 

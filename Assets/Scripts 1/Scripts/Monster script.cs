@@ -48,13 +48,14 @@ public class RandomMovement : MonoBehaviour
             //if it's at the point
             if (agent.remainingDistance > agent.stoppingDistance )
             {
+                yield return new WaitForSeconds(Random.Range(10f, 15f));
+                anim.SetBool("Walk", false);
                 //yield return null;
             }
 
             //nav agent has reached destination point
 
-            anim.SetBool("Walk", true);
-            yield return new WaitForSeconds(Random.Range(5f, 10f));
+            
 
             Vector3 point;
 
@@ -65,7 +66,7 @@ public class RandomMovement : MonoBehaviour
                     Debug.DrawRay(point, Vector3.up, Color.blue, 3.0f);
                     agent.SetDestination(point);
                     print("moving to random point " + point + "  after " + i + "  attempts");
-
+                    anim.SetBool("Walk", true);
                     // found a valid point
                     while (true )
                     {

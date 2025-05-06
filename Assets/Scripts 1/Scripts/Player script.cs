@@ -7,15 +7,17 @@ using System.Net.Sockets;
 
 public class Playerscript : MonoBehaviour
 {
-    Rigidbody rb;
+    public Rigidbody rb;
     SpriteRenderer sr;
     float speed = 5f;
     Vector3 movement;
+    public GameObject Player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         sr = GetComponent<SpriteRenderer>();
+       Player = GameObject.Find("Player");
     }
     void Update()
     {
@@ -69,6 +71,13 @@ public class Playerscript : MonoBehaviour
         {
             SceneManager.LoadScene("Game win");
             Cursor.lockState = CursorLockMode.None;
+        }
+    }
+    public void DeathFreeze()
+    {
+        if (GameObject.FindWithTag ("Player"))
+        {
+            rb.constraints = RigidbodyConstraints.FreezePosition;
         }
     }
 }
