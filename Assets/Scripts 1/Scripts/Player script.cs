@@ -73,11 +73,4 @@ public class Playerscript : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
-    public void DeathFreeze()
-    {
-        if (GameObject.FindWithTag ("Player"))
-        {
-            rb.constraints = RigidbodyConstraints.FreezePosition;
-        }
-    }
 }

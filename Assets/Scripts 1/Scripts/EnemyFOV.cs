@@ -77,6 +77,7 @@ public class EnemyFOV : MonoBehaviour
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
                 agent.SetDestination(player.position);
+                AudioManager.instance.PlayClip(4);
                 agent.speed = 4;
             }
             if (!Physics.Raycast(transform.position, dirToTarget, obstructionmask))
