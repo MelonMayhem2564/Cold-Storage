@@ -9,15 +9,17 @@ using UnityEngine.SceneManagement;
 
 public class Buttonscript : MonoBehaviour
 {
-    public void LoadGame()
+    [SerializeField]
+    private Scenecontroller sceneController;
+    public void LoadMainGame()
     {
-        SceneManager.LoadScene("Game");
+        sceneController.LoadScene("Game");
         AudioManager.instance.PlayClip(0);
         Cursor.lockState = CursorLockMode.Locked;
     }
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Menu");
+        sceneController.LoadScene("Menu");
         AudioManager.instance.PlayClip(0);
     }
     public void QuitGameFromMenu()
@@ -43,6 +45,6 @@ public class Buttonscript : MonoBehaviour
     }
     public void ExtractionLoad()
     {
-        SceneManager.LoadScene("Extraction");
+        sceneController.LoadScene("Extraction");
     }
 }

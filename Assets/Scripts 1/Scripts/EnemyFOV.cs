@@ -30,6 +30,8 @@ public class EnemyFOV : MonoBehaviour
 
     public Playerscript Playerscript;
 
+    public AudioClip Chase;
+    AudioSource audioSource;
     Animator anim;
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class EnemyFOV : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         Playerscript = GetComponent<Playerscript>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -67,6 +70,7 @@ public class EnemyFOV : MonoBehaviour
     {
         visibleTarget.Clear();
         agent.speed = 2;
+        anim.SetBool("Run", false);
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetmask);
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
@@ -77,13 +81,13 @@ public class EnemyFOV : MonoBehaviour
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
                 agent.SetDestination(player.position);
-                AudioManager.instance.PlayClip(4);
-                agent.speed = 4;
+                audioSource.PlayOneShot(Chase, 0.5f);
+                agent.speed = 5;
+                anim.SetBool("Run", true);
             }
             if (!Physics.Raycast(transform.position, dirToTarget, obstructionmask))
             {
                 visibleTarget.Add(target);
-                
             }
         }
     }
