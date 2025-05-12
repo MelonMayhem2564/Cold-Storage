@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class QuitToMenu : MonoBehaviour
 {
+    [SerializeField]
+    private Scenecontroller sceneController;
     public void QuitToMainMenu()
     {
-            SceneManager.LoadScene("Menu");
+            sceneController.LoadScene("Menu");
             Cursor.lockState = CursorLockMode.None;
     }
 }

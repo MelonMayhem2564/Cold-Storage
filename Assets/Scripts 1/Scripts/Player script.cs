@@ -12,20 +12,21 @@ public class Playerscript : MonoBehaviour
     float speed = 5f;
     Vector3 movement;
     public GameObject Player;
+
+    [SerializeField]
+    private Scenecontroller sceneController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         sr = GetComponent<SpriteRenderer>();
-       Player = GameObject.Find("Player");
+        Player = GameObject.Find("Player");
     }
     void Update()
     {
         Movement();
         Rotation();
         QuitGame();
-        DeathTest();
-        WinTest();
     }
     void Movement()
     {
@@ -53,23 +54,18 @@ public class Playerscript : MonoBehaviour
     {
         if (Input.GetKey("q") == true)
         {
-            SceneManager.LoadScene("Menu");
+            sceneController.LoadScene("Menu");
             Cursor.lockState = CursorLockMode.None;
         }
     }
-    void DeathTest()
+
+    void OnCollisionEnter(Collision collision)
     {
-        if (Input.GetKey("f") == true)
+        if (collision.gameObject.tag == "Enemy")
         {
-            SceneManager.LoadScene("Death");
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
-    void WinTest()
-    {
-        if (Input.GetKey("r") == true)
-        {
-            SceneManager.LoadScene("Game win");
+            AudioManager.instance.PlayClip(0);
+            Destroy(Player);
+            sceneController.LoadScene("Death");
             Cursor.lockState = CursorLockMode.None;
         }
     }
