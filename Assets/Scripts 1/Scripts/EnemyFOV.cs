@@ -86,7 +86,6 @@ public class EnemyFOV : MonoBehaviour
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
                 //agent.SetDestination(player.position);
                 audioSource.PlayOneShot(Chase, 0.5f);
-                agent.speed = 5;
                 //anim.SetBool("Run", true);
                 playerVisible = true;
             }

@@ -54,6 +54,9 @@ public class RandomMovement : MonoBehaviour
 
     void Update()
     {
+
+        print("state=" + enemyState);
+
         if (enemyState == EnemyStates.Idle)
         {
             Idle();
@@ -86,13 +89,14 @@ public class RandomMovement : MonoBehaviour
             agent.SetDestination(point);
             endPoint.transform.position = point;
 
-            print("moving to random point " + point);
+            print("moving to random point ");
             anim.SetBool("Walk", true);
             enemyState = EnemyStates.Walk;
         }
         else
         {
             print("*** COULD NOT FIND A RANDOM POINT ***");
+            anim.SetBool("Walk", false);
         }
 
         if (fovScript.playerVisible == true)
@@ -107,12 +111,16 @@ public class RandomMovement : MonoBehaviour
 
         //check enemy has reached dest
 
-        print("remaining=" + agent.remainingDistance);
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        //print("remaining=" + agent.remainingDistance);
+        if (agent.pathPending == false )
         {
-            anim.SetBool("Walk", false);
-            waitDelay = 5;
-            enemyState = EnemyStates.Wait;
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                anim.SetBool("Walk", false);
+                waitDelay = 5;
+                enemyState = EnemyStates.Wait;
+                print("reached point");
+            }
         }
 
         if (fovScript.playerVisible == true)
@@ -164,92 +172,4 @@ public class RandomMovement : MonoBehaviour
         return false;
     }
 
-    IEnumerator PatrolDelay()
-    {
-        bool isMovingToPoint=false;
-        while (true)
-        {
-            if (isMovingToPoint)
-            {
-                //check for enemy reaching a point
-
-                print("remaining=" + agent.remainingDistance);
-                if (agent.remainingDistance <= agent.stoppingDistance)
-                {
-                    isMovingToPoint = false;
-                    anim.SetBool("Walk", false);
-                    yield return new WaitForSeconds(5.5f);
-
-
-                    //reached point
-                    break;
-                }
-                yield return null;
-            }
-
-
-            if (fovScript != null && fovScript.playerVisible == true)
-            {
-                //do run specific code
-
-                //agent.SetDestination(player.position);
-                //anim.SetBool("Run", true);
-
-                //yield return null;
-
-            }
-
-
-            for (int i = 0; i < 10000; i++)
-            {
-                if (RandomPoint(centrePoint.position, range, out point))
-                {
-                    agent.SetDestination(point);
-                    endPoint.transform.position = point;
-
-                    if (agent.isOnNavMesh == true)
-                    {
-
-                        // found a valid point
-
-                        Debug.DrawRay(point, Vector3.up, Color.blue, 3.0f);
-                        //agent.SetDestination(point);
-                        print("moving to random point " + point + "  after " + i + "  attempts");
-                        anim.SetBool("Walk", true);
-                        isMovingToPoint = true;
-                        yield return null;
-                    }
-
-
-
-/*
-
-                    while (true )
-                    {
-                        print("remaining=" + agent.remainingDistance);
-                        if( agent.remainingDistance <= agent.stoppingDistance )
-                        {
-                            anim.SetBool("Walk", false);
-                            yield return new WaitForSeconds(5.5f);
-
-
-                            //reached point
-                            break;
-                        }
-                        else
-                        {
-                        }
-
-                    }
-*/
-
-
-                   break;
-                }
-            }
-            yield return null;
-
-        }
-
-    }
 }
