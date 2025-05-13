@@ -10,6 +10,8 @@ public class EnemyFOV : MonoBehaviour
     [Range(0, 360)]
     public float viewAngle;
 
+    public bool playerVisible;
+
     public LayerMask targetmask;
     public LayerMask obstructionmask;
 
@@ -70,7 +72,9 @@ public class EnemyFOV : MonoBehaviour
     {
         visibleTarget.Clear();
         agent.speed = 2;
-        anim.SetBool("Run", false);
+        //anim.SetBool("Run", false);
+        playerVisible = false;
+
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetmask);
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
@@ -80,23 +84,16 @@ public class EnemyFOV : MonoBehaviour
             if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
-                agent.SetDestination(player.position);
+                //agent.SetDestination(player.position);
                 audioSource.PlayOneShot(Chase, 0.5f);
                 agent.speed = 5;
-                anim.SetBool("Run", true);
+                //anim.SetBool("Run", true);
+                playerVisible = true;
             }
             if (!Physics.Raycast(transform.position, dirToTarget, obstructionmask))
             {
                 visibleTarget.Add(target);
             }
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(gameObject);
         }
     }
 

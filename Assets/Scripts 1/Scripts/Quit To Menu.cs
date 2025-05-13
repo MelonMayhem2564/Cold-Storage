@@ -10,7 +10,7 @@ public class QuitToMenu : MonoBehaviour
     private Scenecontroller sceneController;
     public void QuitToMainMenu()
     {
-            sceneController.LoadScene("Menu");
-            Cursor.lockState = CursorLockMode.None;
+        sceneController.LoadScene("Menu");
+        Cursor.lockState = CursorLockMode.None;
     }
 }
