@@ -42,8 +42,6 @@ public class RandomMovement : MonoBehaviour
 
 
         //StartCoroutine(PatrolDelay());
-        anim.SetBool("Walk", true);
-        anim.SetBool("Run", false);
 
         fovScript = GetComponent<EnemyFOV>();
 
@@ -96,6 +94,11 @@ public class RandomMovement : MonoBehaviour
         {
             print("*** COULD NOT FIND A RANDOM POINT ***");
         }
+
+        if (fovScript.playerVisible == true)
+        {
+            enemyState = EnemyStates.Run;
+        }
     }
 
 
@@ -111,11 +114,24 @@ public class RandomMovement : MonoBehaviour
             waitDelay = 5;
             enemyState = EnemyStates.Wait;
         }
+
+        if (fovScript.playerVisible == true)
+        {
+            enemyState = EnemyStates.Run;
+        }
     }
 
     void Run()
     {
+        agent.speed = 5;
+        agent.SetDestination (player.position);
+        anim.SetBool("Run", true);
 
+        if (fovScript.playerVisible == false)
+        {
+            anim.SetBool("Run", false);
+            enemyState = EnemyStates.Idle;
+        }
     }
 
     void Wait()
@@ -124,6 +140,11 @@ public class RandomMovement : MonoBehaviour
         if( waitDelay <= 0)
         {
             enemyState = EnemyStates.Idle;
+        }
+
+        if (fovScript.playerVisible == true)
+        {
+            enemyState = EnemyStates.Run;
         }
     }
 
