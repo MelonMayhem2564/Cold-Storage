@@ -16,6 +16,8 @@ public class Playerscript : MonoBehaviour
     [SerializeField]
     private Scenecontroller sceneController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -43,11 +45,11 @@ public class Playerscript : MonoBehaviour
     {
         if ((Input.GetKey("left") == true) || (Input.GetKey("a") == true))
         {
-            transform.Rotate(0, -1f, 0, Space.Self);
+            transform.Rotate(0, -1.5f, 0, Space.Self);
         }
         if ((Input.GetKey("right") == true) || (Input.GetKey("d") == true))
         {
-            transform.Rotate(0, 1f, 0, Space.Self);
+            transform.Rotate(0, 1.5f, 0, Space.Self);
         }
     }
     void QuitGame()
@@ -59,12 +61,12 @@ public class Playerscript : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+
+    void OnCollisionEnter (Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             AudioManager.instance.PlayClip(0);
-            Destroy(Player);
             sceneController.LoadScene("Death");
             Cursor.lockState = CursorLockMode.None;
         }

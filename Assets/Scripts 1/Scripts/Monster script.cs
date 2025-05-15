@@ -26,7 +26,10 @@ public class RandomMovement : MonoBehaviour
     Vector3 point; //random point on navmesh
 
     public GameObject endPoint; //debug sphere
+    public GameObject Player;
 
+    [SerializeField]
+    private Scenecontroller sceneController;
 
     Animator anim;
     EnemyFOV fovScript;
@@ -39,7 +42,7 @@ public class RandomMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-
+        Player = GameObject.Find("Player");
 
         //StartCoroutine(PatrolDelay());
 
@@ -71,12 +74,10 @@ public class RandomMovement : MonoBehaviour
             Wait();
         }
 
-
         if (enemyState == EnemyStates.Run)
         {
             Run();
         }
-
     }
 
     void Idle()
@@ -155,7 +156,6 @@ public class RandomMovement : MonoBehaviour
             enemyState = EnemyStates.Run;
         }
     }
-
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
