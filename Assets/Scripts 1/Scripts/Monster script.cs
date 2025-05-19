@@ -139,7 +139,7 @@ public class RandomMovement : MonoBehaviour
         if (fovScript.playerVisible == false)
         {
             anim.SetBool("Run", false);
-            enemyState = EnemyStates.Idle;
+            enemyState = EnemyStates.Walk;
         }
     }
 
