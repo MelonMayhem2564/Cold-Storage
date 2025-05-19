@@ -11,7 +11,6 @@ public class Playerscript : MonoBehaviour
     SpriteRenderer sr;
     float speed = 5f;
     Vector3 movement;
-    public GameObject Player;
 
     [SerializeField]
     private Scenecontroller sceneController;
@@ -22,7 +21,6 @@ public class Playerscript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         sr = GetComponent<SpriteRenderer>();
-        Player = GameObject.Find("Player");
     }
     void Update()
     {
@@ -62,13 +60,23 @@ public class Playerscript : MonoBehaviour
     }
 
 
-    void OnCollisionEnter (Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Enemy")
+
+//        Debug.Log("player has collided with " + collision.gameObject.name);
+
+        if (collider.gameObject.tag == "Enemy")
         {
+            
             AudioManager.instance.PlayClip(0);
+            AudioManager.instance.PlayClip(4);
             sceneController.LoadScene("Death");
             Cursor.lockState = CursorLockMode.None;
+            
         }
+
+
+
     }
+
 }

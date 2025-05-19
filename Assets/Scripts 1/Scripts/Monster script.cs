@@ -118,7 +118,7 @@ public class RandomMovement : MonoBehaviour
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
                 anim.SetBool("Walk", false);
-                waitDelay = 5;
+                waitDelay = 2;
                 enemyState = EnemyStates.Wait;
                 print("reached point");
             }
