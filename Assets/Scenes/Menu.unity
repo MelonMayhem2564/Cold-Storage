@@ -3815,13 +3815,10 @@ MonoBehaviour:
 
     - Scan targets - "x"
 
-    - Red barrels mark a spot
+    - Red boxes mark a spot
     you can drive between,
 
-    offering you an escape route
-
-    - If detected,
-    STAY STILL'
+    offering you an escape route'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
