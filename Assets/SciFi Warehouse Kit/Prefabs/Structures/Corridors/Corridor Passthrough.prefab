@@ -349,6 +349,8 @@ GameObject:
   - component: {fileID: 2528018916316870459}
   - component: {fileID: 2528018916320261977}
   - component: {fileID: 2528018916319294745}
+  - component: {fileID: 5419449795815060919}
+  - component: {fileID: 1926247571088017573}
   m_Layer: 0
   m_Name: Tunnel Piipes
   m_TagString: Untagged
@@ -424,6 +426,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5419449795815060919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528018916317293403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5183649, y: 0.4824697, z: 5.5043516}
+  m_Center: {x: 5.589821, y: 0.24105175, z: 2.9985738}
+--- !u!65 &1926247571088017573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528018916317293403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51727295, y: 0.4824697, z: 5.5043516}
+  m_Center: {x: 0.39878416, y: 0.24105175, z: 2.9985738}
 --- !u!1 &2528018916317293405
 GameObject:
   m_ObjectHideFlags: 0
